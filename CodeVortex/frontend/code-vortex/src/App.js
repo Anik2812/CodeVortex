@@ -9,9 +9,9 @@ import AIAssistant from './pages/AIAssistant';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="container mx-auto px-4 py-8">
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/flashcards" element={<Flashcards />} />
@@ -19,6 +19,9 @@ function App() {
             <Route path="/ai-assistant" element={<AIAssistant />} />
           </Routes>
         </main>
+        <footer className="bg-white text-center py-4 mt-8">
+          <p>&copy; 2024 Code Vortex. All rights reserved.</p>
+        </footer>
       </div>
     </Router>
   );
